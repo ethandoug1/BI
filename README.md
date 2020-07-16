@@ -56,9 +56,7 @@ I created a server and established a database using Microsoft Azure. Sample sale
 --ALTER COLUMN CatalogDescription varchar(max);
 CREATE PROCEDURE SampleProfile
 AS
------------------------------------------------------------------------------------
--- Setup
------------------------------------------------------------------------------------
+### Setup
 SET NOCOUNT ON
 SET ANSI_WARNINGS OFF -- Suppresses the "Null value is eliminated by an aggregate..." warning
 
@@ -81,9 +79,7 @@ DECLARE @stmtUnsup VARCHAR(MAX)
 DECLARE @q CHAR(1)   -- single quote
 DECLARE @qq CHAR(2)  -- double quote
 
------------------------------------------------------------------------------------
--- Table variable to collect the final results
------------------------------------------------------------------------------------
+### Table variable to collect the final results
 DECLARE @Results TABLE (
     [Schema] SYSNAME
   , [Catalog] SYSNAME
@@ -101,25 +97,18 @@ DECLARE @Results TABLE (
   , [Num NULL] NUMERIC
   )
 
-  --select * from @results
------------------------------------------------------------------------------------
--- quote char
------------------------------------------------------------------------------------
+### quote char
 SET @q = ''''
 SET @qq = @q + @q
 
------------------------------------------------------------------------------------
--- The dynamic replacement strings for various data types
------------------------------------------------------------------------------------
+### The dynamic replacement strings for various data types
 SET @stmtUnsup = 'null, null, null, null, null, null, 0'
 SET @stmtString = 'avg(len([@@replace])), ' + 'min(len([@@replace])), ' + 'max(len([@@replace])), ' + 'null, null, count(distinct [@@replace]), ' + 'sum(case when [@@replace] is null then 1 else 0 end)'
 SET @stmtNum = 'avg(CAST(isnull([@@replace], 0) AS FLOAT)), ' + 'min([@@replace]) AS [Min @@replace], ' + 'max([@@replace]) AS [Max @@replace], ' + 'null, null, count(distinct @@replace) AS [Dist Count @@replace], ' + 'sum(case when @@replace is null then 1 else 0 end) AS [Num Null @@replace]'
 SET @stmtDate = 'null, null, null, min([@@replace]) AS [Min @@replace], ' + 'max([@@replace]) AS [Max @@replace], ' + 'count(distinct @@replace) AS [Dist Count @@replace], ' + 'sum(case when @@replace is null then 1 else 0 end) AS [Num Null @@replace]'
 SET @stmtOther = 'null, null, null, null, null, count(distinct @@replace) AS [Dist Count @@replace], ' + 'sum(case when @@replace is null then 1 else 0 end) AS [Num Null @@replace]'
 
------------------------------------------------------------------------------------
--- The cursor to read through the schema.  Change the WHERE clause to control the tables/views used
------------------------------------------------------------------------------------
+### The cursor to read through the schema.  Change the WHERE clause to control the tables/views used
 DECLARE TableCursor CURSOR
 FOR
 SELECT 
@@ -163,9 +152,7 @@ INTO @Schema
    , @num
    , @date
 
------------------------------------------------------------------------------------
--- Process through the database schema
------------------------------------------------------------------------------------
+### Process through the database schema
 WHILE @@FETCH_STATUS = 0
 BEGIN
   SET @sql =
@@ -217,16 +204,12 @@ BEGIN
      , @date
 END
 
------------------------------------------------------------------------------------
--- Clean-up
------------------------------------------------------------------------------------
+### Clean-up
 CLOSE TableCursor
 
 DEALLOCATE TableCursor
 
------------------------------------------------------------------------------------
--- Display the results
------------------------------------------------------------------------------------
+### Display the results
 SELECT 
     [Schema]
   , [Catalog]
@@ -253,14 +236,9 @@ ORDER BY
   , [Seq]
   , [Column Name]
 
-  
------------------------------------------------------------------------------------
--- Reset
------------------------------------------------------------------------------------
+### Reset
 SET NOCOUNT OFF
 SET ANSI_WARNINGS ON
 
------------------------------------------------------------------------------------
--- Stored Procedure
------------------------------------------------------------------------------------
+### Stored Procedure
 exec SampleProfile
