@@ -1,5 +1,6 @@
 # Introduction
-The purpose of this data profile is to capture high level metrics that can serve as a starting poing for data analysis. The code was adapted from [Link](https://www.codeproject.com/) the following data profile was done in SQL using sample data. The code has been recycled and adapted for this example.
+The purpose of this data profile is to capture high level metrics that can serve as a starting poing for data analysis. The script was adapted from [Codeproject](https://www.codeproject.com/Articles/1082891/High-Level-Data-Profiler-Script). A cursor is used against the INFORMATION_SCHEMA views to loop through the selected schemas, 
+tables and views to construct and execute a profiling SELECT statement for each column.
 
 # Environment
 I created a server and established a database using Microsoft Azure. Sample sales data was used to create and populate the database.
