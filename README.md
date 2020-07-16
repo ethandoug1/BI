@@ -51,9 +51,6 @@ I created a server and established a database using Microsoft Azure. Sample sale
 
 # Code
 ```markdown
---DEALLOCATE TableCursor
---ALTER TABLE salesLt.ProductModel
---ALTER COLUMN CatalogDescription varchar(max);
 CREATE PROCEDURE SampleProfile
 AS
 ### Setup
