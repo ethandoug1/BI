@@ -17,9 +17,6 @@ I created a server and established a database using Microsoft Azure. Sample sale
 # Results
 
 # Script
-
-```markdown
-
 CREATE PROCEDURE SampleProfile
 AS
 ### Setup
