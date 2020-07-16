@@ -12,6 +12,8 @@ I created a server and established a database using Microsoft Azure. Sample sale
 ![Image](Azure_Database.PNG)
 
 ## Schema and Tables
+The script filters on SalesLT tables.
+
 ![Image](Azure_Tables.PNG)
 
 # Results
