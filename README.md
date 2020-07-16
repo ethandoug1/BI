@@ -64,10 +64,10 @@ DECLARE @Results TABLE (
   , [Distinct Values] NUMERIC
   , [Num NULL] NUMERIC
   )
---quote char
+### quote char
 SET @q = ''''
 SET @qq = @q + @q
---The dynamic replacement strings for various data types
+### The dynamic replacement strings for various data types
 SET @stmtUnsup = 'null, null, null, null, null, null, 0'
 SET @stmtString = 'avg(len([@@replace])), ' + 'min(len([@@replace])), ' + 'max(len([@@replace])), ' + 'null, null, count(distinct [@@replace]), ' + 'sum(case when [@@replace] is null then 1 else 0 end)'
 SET @stmtNum = 'avg(CAST(isnull([@@replace], 0) AS FLOAT)), ' + 'min([@@replace]) AS [Min @@replace], ' + 'max([@@replace]) AS [Max @@replace], ' + 'null, null, count(distinct @@replace) AS [Dist Count @@replace], ' + 'sum(case when @@replace is null then 1 else 0 end) AS [Num Null @@replace]'
