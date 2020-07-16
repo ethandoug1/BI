@@ -17,7 +17,9 @@ I created a server and established a database using Microsoft Azure. Sample sale
 # Results
 
 # Script
+
 ```markdown
+
 CREATE PROCEDURE SampleProfile
 AS
 ### Setup
@@ -143,7 +145,7 @@ BEGIN
     SET @TableName = @q + @TableName + @q
     SET @TableType = @q + @TableType + @q
     SET @ColumnName = @q + REPLACE(@ColumnName, @q, @qq) + @q
-    SET @DataType = @q + @DataType + @q
+     SET @DataType = @q + @DataType + @q
    
     SET @sql = 'SELECT ' + @Schema + ', ' + @Catalog + ', 
     ' + @TableName + ', ' + @TableType + ', ' + @ColumnName + ', 
