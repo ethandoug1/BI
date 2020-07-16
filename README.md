@@ -20,7 +20,7 @@ The output shows the Data Type, Avg Len/Val, Min Len/Val, Max Len/Val, Min Date,
 ![Image](Sample_Results.PNG)
 
 # Script
-```markdown
+
 CREATE PROCEDURE SampleProfile
 AS
 
@@ -73,7 +73,7 @@ SET @stmtString = 'avg(len([@@replace])), ' + 'min(len([@@replace])), ' + 'max(l
 SET @stmtNum = 'avg(CAST(isnull([@@replace], 0) AS FLOAT)), ' + 'min([@@replace]) AS [Min @@replace], ' + 'max([@@replace]) AS [Max @@replace], ' + 'null, null, count(distinct @@replace) AS [Dist Count @@replace], ' + 'sum(case when @@replace is null then 1 else 0 end) AS [Num Null @@replace]'
 SET @stmtDate = 'null, null, null, min([@@replace]) AS [Min @@replace], ' + 'max([@@replace]) AS [Max @@replace], ' + 'count(distinct @@replace) AS [Dist Count @@replace], ' + 'sum(case when @@replace is null then 1 else 0 end) AS [Num Null @@replace]'
 SET @stmtOther = 'null, null, null, null, null, count(distinct @@replace) AS [Dist Count @@replace], ' + 'sum(case when @@replace is null then 1 else 0 end) AS [Num Null @@replace]'
---The cursor to read through the schema.  Change the WHERE clause to control the tables/views used
+--The cursor to read through the schema.
 DECLARE TableCursor CURSOR
 FOR
 SELECT 
