@@ -143,7 +143,10 @@ BEGIN
     SET @ColumnName = @q + REPLACE(@ColumnName, @q, @qq) + @q
     SET @DataType = @q + @DataType + @q
    
-    SET @sql = 'SELECT ' + @Schema + ', ' + @Catalog + ', ' + @TableName + ', ' + @TableType + ', ' + @ColumnName + ', ' + CONVERT(VARCHAR(5), @OrdinalPosition) + ', ' + @DataType + ', ' + @sql + ' FROM ' + Concat(REPLACE(@schema, '''', ''),'.', REPLACE(@TableName, '''', '')) + ''
+    SET @sql = 'SELECT ' + @Schema + ', ' + @Catalog + ', 
+    ' + @TableName + ', ' + @TableType + ', ' + @ColumnName + ', 
+    ' + CONVERT(VARCHAR(5), @OrdinalPosition) + ', ' + @DataType + ', 
+    ' + @sql + ' FROM ' + Concat(REPLACE(@schema, '''', ''),'.', REPLACE(@TableName, '''', '')) + ''
 
     PRINT @sql
 
