@@ -16,6 +16,7 @@ I created a server and established a database using Microsoft Azure. Sample sale
 
 # Results
 The output shows the Data Type, Avg Len/Val, Min Len/Val, Max Len/Val, Min Date, Max Date, Distinct Values, Num NULL, per table and column. See below sample:
+
 ![Image](Sample_Results.PNG)
 
 # Script
