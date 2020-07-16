@@ -14,7 +14,9 @@ I created a server and established a database using Microsoft Azure. Sample sale
 ## Schema and Tables
 ![Image](Azure_Tables.PNG)
 
-# Code
+# Results
+
+# Script
 ```markdown
 CREATE PROCEDURE SampleProfile
 AS
