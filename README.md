@@ -11,7 +11,7 @@ I created a server and established a database using Microsoft Azure. Sample sale
 ## Database
 ![Image](Azure_Database.PNG)
 
-## Schema
+## Schema and Tables
 ![Image](Azure_Tables.PNG)
 
 # Code
@@ -97,7 +97,6 @@ WHERE
 ORDER BY 
           c.TABLE_NAME
         , c.ORDINAL_POSITION
-
 
 OPEN TableCursor
 
