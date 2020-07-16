@@ -51,6 +51,8 @@ I created a server and established a database using Microsoft Azure. Sample sale
 
 # Code
 ```markdown
+Syntax highlighted code block
+
 CREATE PROCEDURE SampleProfile
 AS
 ### Setup
