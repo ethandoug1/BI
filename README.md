@@ -1,5 +1,5 @@
 # Introduction
-The purpose of this data profile is to capture high level metrics that can serve as a starting poing for data analysis. The script was adapted from [Codeproject](https://www.codeproject.com/Articles/1082891/High-Level-Data-Profiler-Script). A cursor is used against the INFORMATION_SCHEMA views to loop through the selected schemas, 
+The purpose of this data profile is to capture high level metrics that can serve as a starting point for data analysis. The script was adapted from [Codeproject](https://www.codeproject.com/Articles/1082891/High-Level-Data-Profiler-Script). A cursor is used against the INFORMATION_SCHEMA views to loop through the selected schemas, 
 tables and views to construct and execute a profiling SELECT statement for each column.
 
 # Environment
