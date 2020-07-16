@@ -44,7 +44,7 @@ DECLARE @stmtOther VARCHAR(MAX)
 DECLARE @stmtUnsup VARCHAR(MAX)
 DECLARE @q CHAR(1)   -- single quote
 DECLARE @qq CHAR(2)  -- double quote
-
+```markdown
 ### Table variable to collect the final results
 DECLARE @Results TABLE (
     [Schema] SYSNAME
@@ -62,7 +62,7 @@ DECLARE @Results TABLE (
   , [Distinct Values] NUMERIC
   , [Num NULL] NUMERIC
   )
-
+```markdown
 ### quote char
 SET @q = ''''
 SET @qq = @q + @q
