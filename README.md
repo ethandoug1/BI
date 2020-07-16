@@ -41,6 +41,12 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 The following data profile was done in SQL using sample data. The code has been recycled and adapted for this example.
 
 # Environment
+I created a server and established a database using Microsoft Azure. Sample sales data was used to create and populate the database.
+
+## Server
 ![Image](Azure_Server.PNG)
+
+## Database
+![Image](Azure_Database.PNG)
 
 
