@@ -1,5 +1,5 @@
 # Introduction
-The following data profile was done in SQL using sample data. The code has been recycled and adapted for this example.
+The purpose of this data profile is to capture high level metrics that can serve as a starting poing for data analysis. The code was adapted from [Link](https://www.codeproject.com/) the following data profile was done in SQL using sample data. The code has been recycled and adapted for this example.
 
 # Environment
 I created a server and established a database using Microsoft Azure. Sample sales data was used to create and populate the database.
