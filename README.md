@@ -41,6 +41,6 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 The following data profile was done in SQL using sample data. The code has been recycled and adapted for this example.
 
 # Environment
-![Image](src)
+![Image](Azure_Server.PNG)
 
 
