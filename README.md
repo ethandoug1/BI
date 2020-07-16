@@ -20,7 +20,7 @@ The output shows the Data Type, Avg Len/Val, Min Len/Val, Max Len/Val, Min Date,
 ![Image](Sample_Results.PNG)
 
 # Script
-
+```markdown
 CREATE PROCEDURE SampleProfile
 AS
 
