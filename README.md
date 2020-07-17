@@ -6,9 +6,13 @@ tables, and views to construct and execute a profiling SELECT statement for each
 I created a server and established a database using Microsoft Azure. Sample sales data was used to populate the database.
 
 ## Server
+I called the server 'example' for the purpose of this task
+
 ![Image](Azure_Server.PNG)
 
 ## Database
+I called the database portfolioDB
+
 ![Image](Azure_Database.PNG)
 
 ## Schema and Tables
