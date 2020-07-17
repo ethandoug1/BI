@@ -3,7 +3,7 @@ The purpose of this data profile is to capture high level metrics that can serve
 tables, and views to construct and execute a profiling SELECT statement for each column.
 
 # Environment
-I created a server and established a database using Microsoft Azure. Sample sales data was used to create and populate the database.
+I created a server and established a database using Microsoft Azure. Sample sales data was used to populate the database.
 
 ## Server
 ![Image](Azure_Server.PNG)
