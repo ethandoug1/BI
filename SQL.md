@@ -1,7 +1,7 @@
 ---
 title: SQL
 layout: template
-filename: SQL.md FILE HERE
+filename: SQL.md
 --- 
 
 # Introduction
